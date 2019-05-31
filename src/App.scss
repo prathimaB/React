@@ -1,0 +1,153 @@
+@import './styles/_variables.scss';
+
+html,body{
+  min-height:100%;
+}
+
+.component{
+  min-height: 83.2vh;
+  p{
+    margin-bottom: 0;
+  }
+}
+.navbar{
+  background-color: $base-color;
+  padding-right:3em;
+  font-weight: bold;
+
+  .nav-item{
+          a{
+            color: #FFF;
+            font-size: 20px;
+            margin-left: 12px;
+            &:hover{
+              color:$base-color1;
+            }
+          }
+      }
+}
+
+.navbar-toggler-icon {
+  background-image : url("./assets/hamburger-icon.png");
+}
+
+.nav-item.active a{
+  color:$base-color1;
+}
+
+footer{
+  background-color: $base-color;
+  width: 100%;
+  clear: both;
+  p{
+    margin-bottom: 0;
+  }
+}
+
+h3{
+  color:$base-color1;    
+  margin-bottom: 20px;
+}
+
+
+//Registration Styles
+.register{
+  margin: 0 auto;
+  width:85%;
+  padding: 2em 0;
+  label{
+    display:block;
+    margin: 15px 0; 
+    input{
+      display:block;
+      width: 100%;
+    }
+  }
+}
+.errorMessage{color:red;}
+
+.term-sec{
+  display: flex;
+  flex-direction: row;
+
+  .terms-check{
+    margin-right: 5px;
+    margin-top: 6px;
+  }
+  .term-text{
+    display: inline-block;
+    margin-bottom: 0;
+    margin-top: 0;
+  }
+}
+.submit{
+  display: block;
+  background-color: $base-color1;
+  border-color: $base-color1;
+  width: 180px;
+  color: #FFF;
+  font-weight: bold;
+  margin-top:30px;
+}
+//ReactBasics Styles
+.reactBasic{
+    h3{
+      padding-top: 30px;
+      text-align: center;
+    }
+    .head{
+      color: #255b69;
+      margin-bottom: 10px;
+      font-size: 18px;
+      font-weight: bold;
+    }
+    p{
+      margin-top: 5px;
+    }
+    ul{
+      margin-bottom: 0;
+      li{
+        padding-bottom: 30px;
+      }
+    } 
+
+}
+
+@media screen and (min-width: $break-ipadP){
+  .register{
+    width: 71%;
+    padding: 7em 0;
+    label{
+      margin: 30px 0;
+    }
+  }
+  .component{   
+    min-height: 89.1vh;
+  }
+}
+
+@media screen and (min-width: $break-ipad){
+  .register{
+    padding: 2em 0;
+  }
+  .navbar-expand-lg .navbar-collapse{
+    justify-content: flex-end;
+  }
+  .component {
+    min-height: 84.5vh;
+  }
+}
+
+@media screen and (min-width: $break-desk){
+  .register {
+    width: 51%;
+  }
+  footer{
+    position: static;
+  }
+  .reactBasic{
+    width:1200px;
+    margin: 0 auto;
+    }
+    
+}
